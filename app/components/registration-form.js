@@ -1,6 +1,8 @@
 import Component from '@ember/component';
-
+import {inject as service}  from '@ember/service'
 export default Component.extend({
+
+    store: service(), 
 
     fname:"",
     lname:"",
@@ -8,12 +10,21 @@ export default Component.extend({
     email:"",
     actions:{
         save(){
+            let context=this;
+            let ID=this.get("ID");
             let name1=this.get("fname");
             let name2=this.get("lname");
             let age=this.get("age");
             let email=this.get("email");
-            console.log(name1, name2, age, email);
-            
+            let model=this.get('store').createRecord('person',{
+                id:ID,
+                firstname:name1,
+                lastname:name2,
+                age:age,
+                email:email
+            });
+            //console.log(model);
+    
         }
     }
 });
