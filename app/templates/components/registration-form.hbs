@@ -1,0 +1,24 @@
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h2>Welcome to Ember Data Rnd</h2>
+  <p>
+    a step towards Ember Data research and development
+  </p>
+  <h2>Registration form</h2>
+
+<form>
+  First name:<br>
+  {{input type="text" name="firstname" value=fname}}
+  <br>
+  Last name:<br>
+  {{input type="text" name="lastname" value=lname}}
+  <br>
+  Age:<br>
+  {{input type="number" name="age" value=age}}
+  <br>
+  EMail:<br>{{input type="email" name="email" value=email}}
+</form>
+
+ <button type="button"{{action "save"}}>Click Me!</button> 
+ <div class="button"  {{action "save"}}>Save</div> 
+</div>
