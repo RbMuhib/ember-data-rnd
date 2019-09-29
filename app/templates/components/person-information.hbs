@@ -15,6 +15,7 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 </style>
+
 <h2>INFORMATION booth</h2>
 <div>
     <table>
@@ -26,23 +27,18 @@ tr:nth-child(even) {
             <th>Email</th>
             <th>Action</th>
         </tr>
+
+
+        {{#each data as |info|}}
         <tr>
-            <td>1</td>
-            <td>Maria </td>
-            <td> Anders</td>
-            <td>40</td>
-            <td>anders@gmail.com</td>
-            <td>SE</td>
+            <th>ID</th>
+            <th>{{info.fname}}</th>
+            <th>{{info.lname}}</th>
+            <th>{{info.age}}</th>
+            <th>{{info.email}}</th>
+            <th>Action</th>
         </tr>
-        <tr>
-            <td>3</td>
-            <td>Francisco </td>
-            <td>chang</td>
-            <td>35</td>
-            <td>chang@gmail.com</td>
-            <td>ME</td>
-        </tr>
-        
+        {{/each}}
        
     </table>
 </div>
