@@ -36,7 +36,9 @@ tr:nth-child(even) {
             <th>{{info.lname}}</th>
             <th>{{info.age}}</th>
             <th>{{info.email}}</th>
-            <th>Action</th>
+            <th><button type="button" {{action "save"}}> EDIT </button>
+            <button type="button" {{action "save"}}> Delete </button></th>
+            
         </tr>
         {{/each}}
        
