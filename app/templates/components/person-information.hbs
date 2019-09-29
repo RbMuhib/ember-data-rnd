@@ -31,13 +31,13 @@ tr:nth-child(even) {
 
         {{#each data as |info|}}
         <tr>
-            <th>ID</th>
+            <th>{{info.pid}}</th>
             <th>{{info.fname}}</th>
             <th>{{info.lname}}</th>
             <th>{{info.age}}</th>
             <th>{{info.email}}</th>
-            <th><button type="button" {{action "save"}}> EDIT </button>
-            <button type="button" {{action "save"}}> Delete </button></th>
+            <th><button type="button" {{action "editAction" info}}> EDIT </button>
+            <button type="button" {{action "deleteAction" info}}> Delete </button></th>
             
         </tr>
         {{/each}}
