@@ -24,7 +24,7 @@ export default Component.extend({
                 age:age,
                 email:email
             });
-            //console.log(model);
+            console.log(model);
     
         }
     }
