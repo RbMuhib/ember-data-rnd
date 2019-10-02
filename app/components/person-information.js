@@ -43,8 +43,9 @@ export default Component.extend({
             let post = store.peekRecord('person', value.id);
             if (post) {
                 store.unloadRecord(post);
+                
             }
-            
+           
         },
     }
 });
