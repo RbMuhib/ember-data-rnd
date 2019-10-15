@@ -15,7 +15,6 @@ export default Component.extend({
     loadData() {
         let head = this.get('store').peekAll('person');
         for (let i = 0; i < head.length; i++) {
-
             let rowInfo = {
                 id: head._objects[i]._internalModel.__recordData.id,
                 fname: head._objects[i]._internalModel.__recordData._attributes.firstname,
@@ -26,8 +25,7 @@ export default Component.extend({
 
             this.data.pushObject(rowInfo);
         }
-        console.log(this.data[0]);
-
+        console.log(this.data[0]); 
     },
     actions: {
         editAction() {
